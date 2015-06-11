@@ -24,7 +24,7 @@ return fsAsync.createFile(TMP_FILE_PATH).then(function () {
 })
 .then(function(file_stat) {
   // check
-  return h.expect(file_stat.isFile()).to.be.equal(true);
+  console.log(TMP_FILE_PATH, 'is a file?', file_stat.isFile());
 })
 .then(function() {
   // remove tmp file
@@ -36,7 +36,7 @@ return fsAsync.createFile(TMP_FILE_PATH).then(function () {
 })
 .then(function(file_exists) {
   // check again
-  return h.expect(file_exists).to.be.equal(false);
+  console.log(TMP_FILE_PATH, 'is a file?', file_stat.isFile());
 });
 ```
 

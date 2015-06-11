@@ -1,1 +1,1 @@
-exports.fsAsync = require('./lib/src').FileAsync;
+module.exports = require('./lib/src/file-async');
