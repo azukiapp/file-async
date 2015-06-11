@@ -1,11 +1,11 @@
 # file-async
 
-<!-- [![NPM](https://nodei.co/npm/cli-router.png)](https://nodei.co/npm/cli-router/) -->
+[![NPM](https://nodei.co/npm/file-async.png)](https://nodei.co/npm/file-async/)
 
 Use async fs. No more blocking code.
 fs-extra + bluebird promisify
 
-## Install with [npm](https://www.npmjs.com/package/cli-router)
+## Install with [npm](https://www.npmjs.com/package/file-async)
 
 ```shell
 $ npm install --save file-async
