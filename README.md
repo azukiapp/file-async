@@ -36,7 +36,7 @@ return fsAsync.createFile(TMP_FILE_PATH).then(function () {
 })
 .then(function(file_exists) {
   // check again
-  console.log(TMP_FILE_PATH, 'is a file?', file_stat.isFile());
+  console.log(TMP_FILE_PATH, 'is a file?', file_exists);
 });
 ```
 
