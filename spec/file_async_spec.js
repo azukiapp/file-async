@@ -4,6 +4,17 @@ import fsAsync from '../src/file-async';
 
 describe('fsAsync:', function() {
 
+  it("should keep support sync methods", function() {
+    h.expect(fsAsync.existsSync(__filename)).to.ok;
+  });
+
+  it("should keep support callback methods", function(done) {
+    fsAsync.readFileCallback(__filename, function(err, file_content) {
+      h.expect(file_content.toString()).not.been.undefined;
+      done();
+    });
+  });
+
   it('should read a file', function () {
     return fsAsync.readFile(__filename).then(function(file_content) {
       return h.expect(file_content.toString()).not.been.undefined;
