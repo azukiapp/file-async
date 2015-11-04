@@ -2,8 +2,9 @@
 
 [![NPM](https://nodei.co/npm/file-async.png)](https://nodei.co/npm/file-async/)
 
-Use async fs. No more blocking code.
-fs-extra + bluebird promisify
+all functions from [fs](https://nodejs.org/api/fs.html) and [fs-extra](https://github.com/jprichardson/node-fs-extra) _bluebird's promisified_
+
+No more blocking code.
 
 ## Install with [npm](https://www.npmjs.com/package/file-async)
 
@@ -17,13 +18,13 @@ $ npm install --save file-async
 var fsAsync = require('file-async');
 
 var TMP_FILE_PATH = '/tmp/file_content.js';
-// touch
+// "touch" a new empty file
 return fsAsync.createFile(TMP_FILE_PATH).then(function () {
-  // get stat
+  // get stats
   return fsAsync.stat(TMP_FILE_PATH);
 })
 .then(function(file_stat) {
-  // check
+  // check is it is a file
   console.log(TMP_FILE_PATH, 'is a file?', file_stat.isFile());
 })
 .then(function() {
@@ -31,7 +32,7 @@ return fsAsync.createFile(TMP_FILE_PATH).then(function () {
   return fsAsync.remove(TMP_FILE_PATH);
 })
 .then(function() {
-  // exits?
+  // exists?
   return fsAsync.exists(TMP_FILE_PATH);
 })
 .then(function(file_exists) {
@@ -39,6 +40,93 @@ return fsAsync.createFile(TMP_FILE_PATH).then(function () {
   console.log(TMP_FILE_PATH, 'is a file?', file_exists);
 });
 ```
+
+## Functions
+
+### async functions (Promises)
+
+- access
+- appendFile
+- chmod
+- chown
+- close
+- copy
+- createFile
+- createOutputStream
+- createReadStream
+- createWriteStream
+- delete
+- emptyDir
+- emptydir
+- ensureDir
+- ensureFile
+- exists
+- fchmod
+- fchown
+- fdatasync
+- FileReadStream
+- FileWriteStream
+- fstat
+- fsync
+- ftruncate
+- futimes
+- lchmod
+- lchown
+- link
+- lstat
+- lutimes
+- mkdir
+- mkdirp
+- mkdirs
+- move
+- open
+- outputFile
+- outputJson
+- outputJSON
+- read
+- readdir
+- readFile
+- readJson
+- readJSON
+- readJsonFile
+- readJSONFile
+- readlink
+- ReadStream
+- realpath
+- remove
+- rename
+- rmdir
+- stat
+- Stats
+- symlink
+- truncate
+- unlink
+- unwatchFile
+- utimes
+- watch
+- watchFile
+- write
+- writeFile
+- writeJson
+- writeJSON
+- writeJsonFile
+- writeJSONFile
+- WriteStream
+
+-----------
+
+#### callback node.js old callback way (do use this)
+
+> accessCallback, appendFileCallback, chmodCallback, chownCallback, closeCallback, copyCallback, createFileCallback, createOutputStreamCallback, createReadStreamCallback, createWriteStreamCallback, deleteCallback, emptyDirCallback, emptydirCallback, ensureDirCallback, ensureFileCallback, existsCallback, fchmodCallback, fchownCallback, fdatasyncCallback, FileReadStreamCallback, FileWriteStreamCallback, fstatCallback, fsyncCallback, ftruncateCallback, futimesCallback, lchmodCallback, lchownCallback, linkCallback, lstatCallback, lutimesCallback, mkdirCallback, mkdirpCallback, mkdirsCallback, moveCallback, openCallback, outputFileCallback, outputJsonCallback, outputJSONCallback, readCallback, readdirCallback, readFileCallback, readJsonCallback, readJSONCallback, readJsonFileCallback, readJSONFileCallback, readlinkCallback, ReadStreamCallback, realpathCallback, removeCallback, renameCallback, rmdirCallback, statCallback, StatsCallback, symlinkCallback, truncateCallback, unlinkCallback, unwatchFileCallback, utimesCallback, watchCallback, watchFileCallback, writeCallback, writeFileCallback, writeJsonCallback, writeJSONCallback, writeJsonFileCallback, writeJSONFileCallback, WriteStreamCallback
+
+-----------
+
+#### sync functions (blocking code - do use this)
+
+> accessSync, existsSync, readFileSync, closeSync, openSync, readSync, writeSync, renameSync, truncateSync, ftruncateSync, rmdirSync, fdatasyncSync, fsyncSync, mkdirSync, readdirSync, fstatSync, lstatSync, statSync, readlinkSync, symlinkSync, linkSync, unlinkSync, fchmodSync, chmodSync, fchownSync, chownSync, utimesSync, futimesSync, writeFileSync, appendFileSync, realpathSync, lutimesSync, lchownSync, lchmodSync, copySync, removeSync, deleteSync, mkdirsSync, mkdirpSync, createFileSync, ensureFileSync, ensureDirSync, outputFileSync, readJsonFileSync, readJSONFileSync, readJsonSync, readJSONSync, outputJsonSync, outputJSONSync, writeJsonFileSync, writeJSONFileSync, writeJsonSync, writeJSONSync, emptyDirSync, emptydirSync
+
+-----------
+
 
 ## CONTRIBUTING
 
