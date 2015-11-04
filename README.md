@@ -2,9 +2,12 @@
 
 [![NPM](https://nodei.co/npm/file-async.png)](https://nodei.co/npm/file-async/)
 
-all functions from [fs](https://nodejs.org/api/fs.html) and [fs-extra](https://github.com/jprichardson/node-fs-extra) _bluebird's promisified_
+[![Build Status](https://travis-ci.org/azukiapp/file-async.svg?branch=master)](https://travis-ci.org/azukiapp/file-async)
 
-No more blocking code.
+- All functions from [fs](https://nodejs.org/api/fs.html) and [fs-extra](https://github.com/jprichardson/node-fs-extra) to use with Promises
+- No more blocking code.
+- _bluebird's promisified_
+- _exists()_ is fixed
 
 ## Install with [npm](https://www.npmjs.com/package/file-async)
 
