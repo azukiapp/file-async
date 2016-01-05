@@ -7,6 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 * Enhancements
   - [Core] Removing unnecessary dev dependence: `babel-polyfill`;
+  * [jscs] `validateJSDoc` is deprecated, use `jsDoc` in replace;
 
 ## v0.2.0 - (2016-01-04)
 
