@@ -1,7 +1,7 @@
 var path = require('path');
 
 var Helpers = {
-  expect : require('azk-dev/chai').expect,
+  expect : require('azk-dev/lib/chai').expect,
 
   fixture_path(...fixture) {
     return path.resolve(

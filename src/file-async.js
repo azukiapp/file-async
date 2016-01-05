@@ -1,5 +1,5 @@
 import BB from 'bluebird';
-var extra = require('fs-extra');
+import extra from 'fs-extra';
 
 var final = {
   existsCallback: extra.exists.bind(extra),
