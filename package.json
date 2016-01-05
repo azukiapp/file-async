@@ -10,7 +10,6 @@
   },
   "devDependencies": {
     "azk-dev": "^0.2.0",
-    "babel-polyfill": "^6.3.14",
     "gulp": "^3.8.11"
   },
   "scripts": {
